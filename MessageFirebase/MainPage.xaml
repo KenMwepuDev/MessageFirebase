@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MessageFirebase.MainPage">
+
+    <Grid VerticalOptions="Center" 
+          Margin="10"
+          RowSpacing="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Text="UserName :" VerticalTextAlignment="Center"/>
+                <Entry x:Name="EntryUserName"
+                   Grid.Column="1"
+                   Placeholder="UserName"
+                   HorizontalTextAlignment="Center"/> 
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Text="Message :" VerticalTextAlignment="Center"/>
+                <Entry x:Name="EntryMessage"
+                   Grid.Column="1"
+                   Placeholder="Message"
+                   HorizontalTextAlignment="Center"/>
+            </Grid>
+        </Grid>
+        <Button x:Name="BT_SendMessage"
+                Grid.Row="2"
+                Text="Send Message"
+                WidthRequest="200"
+                Clicked="BT_SendMessage_Clicked"/>
+    </Grid>
+</ContentPage>
